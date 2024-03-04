@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User page</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Parte 3</h1>
+<div class = "main_container">
+  <div class="row">
+    <div class="left">userId: </div>
+    <div class="left" th:text="${1}"></div>
+  </div>
+  <div class="row">
+    <div class="left">Id: </div>
+    <div class="left" th:text="${user.id}"></div>
+  </div>
+  <div class="row">
+    <div class="left">title: </div>
+    <div class="left" th:text="${user.title}"></div>
+  </div>
+  <div class="row">
+    <div class="left">completed: </div>
+    <div class="left" th:text="${user.completed}"></div>
+  </div>
+  <div class="navigation">
+    <a th:href="@{/todos/{id}/prev(id=${user.id})}">Previous</a>
+    <a th:href="@{/todos/{id}/next(id=${user.id})}">Next</a>
+  </div>
+
+</div>
+</body>
+</html>
