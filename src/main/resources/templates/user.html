@@ -2,31 +2,70 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>User page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <style>
+        h1 {
+            color: white; /* Cambia el color del texto a blanco */
+        }
+
+        .text-center {
+            color: white; /* Cambia el color del texto a blanco */
+        }
+        body {
+            background-image: url('/images/b01bc8672e8cc19e989963759e23239b.gif');
+            background-size: cover; /* Ajusta la imagen al tamaño del cuerpo */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+
+        .main_container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .row {
+            margin-bottom: 15px;
+        }
+        .btn-nav {
+            margin-right: 10px;
+        }
+
+    </style>
 </head>
 <body>
 <h1>Parte 3</h1>
-<div class = "main_container">
-  <div class="row">
-    <div class="left">userId: </div>
-    <div class="left" th:text="${1}"></div>
+<div class="container">
+  <h1 class="text-center">Detalles de la Tarea</h1>
+  <div class="main_container">
+    <div class="row">
+      <div class="col-md-3 font-weight-bold">userId:</div>
+      <div class="col-md-9" th:text="${1}"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 font-weight-bold">Id:</div>
+      <div class="col-md-9" th:text="${user.id}"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 font-weight-bold">Título:</div>
+      <div class="col-md-9" th:text="${user.title}"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 font-weight-bold">Completado:</div>
+      <div class="col-md-9" th:text="${user.completed}"></div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-6 text-left">
+        <a class="btn btn-primary btn-nav" th:href="@{/todos/{id}/prev(id=${user.id})}">Anterior</a>
+        <a class="btn btn-primary btn-nav" th:href="@{/todos/{id}/next(id=${user.id})}">Siguiente</a>
+      </div>
   </div>
-  <div class="row">
-    <div class="left">Id: </div>
-    <div class="left" th:text="${user.id}"></div>
-  </div>
-  <div class="row">
-    <div class="left">title: </div>
-    <div class="left" th:text="${user.title}"></div>
-  </div>
-  <div class="row">
-    <div class="left">completed: </div>
-    <div class="left" th:text="${user.completed}"></div>
-  </div>
-  <div class="navigation">
-    <a th:href="@{/todos/{id}/prev(id=${user.id})}">Previous</a>
-    <a th:href="@{/todos/{id}/next(id=${user.id})}">Next</a>
-  </div>
+</div>
+
 
 </div>
 </body>
