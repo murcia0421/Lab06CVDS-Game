@@ -11,7 +11,7 @@
 Usaremos las siguientes aplicaciones como cliente HTTP
 - Postman
 - Telnet
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
   Aquí está la solicitud GET con el recurso ssss/abc.html agregado:
 
@@ -26,10 +26,10 @@ El resultado obtenido incluye el código de estado HTTP 301, que indica un redir
 HTTP/1.1 301 Moved Permanently
 Estos códigos de error se manejan según las circunstancias específicas y se pueden mostrar al usuario para indicar problemas con la solicitud o el servidor. En el caso de los códigos de error 404 y 500, por ejemplo, pueden requerir intervención del administrador del servidor para solucionar los problemas subyacentes.
 
-![img_3.png](img_3.png)
-![img_4.png](img_4.png)
-![img_5.png](img_5.png)
-![img_6.png](img_6.png)
+![img_3.png](images/img_3.png)
+![img_4.png](images/img_4.png)
+![img_5.png](images/img_5.png)
+![img_6.png](images/img_6.png)
 
 Los comandos curl -v y curl -i son útiles para realizar solicitudes HTTP con la herramienta curl y mostrar información adicional sobre la respuesta del servidor. Aquí te explico las diferencias entre ambos:
 
@@ -37,8 +37,8 @@ curl -v www.httpbin.org: Este comando realiza una solicitud HTTP GET a www.httpb
 
 curl -i www.httpbin.org: Este comando realiza una solicitud HTTP GET a www.httpbin.org y muestra los encabezados de respuesta del servidor en la salida. La opción -i (o --include) indica a curl que incluya los encabezados de respuesta en la salida junto con el cuerpo de la respuesta. Esto puede ser útil para inspeccionar los encabezados de respuesta, como los códigos de estado HTTP, los encabezados de contenido y otros metadatos, sin tener que analizar manualmente la respuesta completa.
 
-![img_7.png](img_7.png)
-![img_8.png](img_8.png)
+![img_7.png](images/img_7.png)
+![img_8.png](images/img_8.png)
 
 ¿Qué pasa si no envío el método correcto?
 
@@ -55,7 +55,7 @@ Según la especificación de HTTP, las solicitudes GET no deben contener un body
 
 ### PARTE III. - HACIENDO UNA APLICACIÓN WEB DINÁMICA USANDO EL PATRÓN MVC
 Usaremos la documentación oficial de Spring  
-![img_9.png](img_9.png)
+![img_9.png](images/img_9.png)
 
 1. **¿Por qué MVC obtiene ese nombre?**
     - MVC significa Modelo-Vista-Controlador. Este patrón de diseño se denomina así porque divide una aplicación en tres componentes principales:
@@ -78,17 +78,17 @@ Usaremos la documentación oficial de Spring
 
 5. **Ahora, haz el request GET http://localhost:8080/greeting usando Postman, y revisa si el body de la respuesta es igual a alguno de los archivos del proyecto. ¿Significa eso que es un recurso web dinámico o estático?**
     - Si el body de la respuesta es igual a alguno de los archivos del proyecto, significa que es un recurso web estático. En este caso, el controlador probablemente esté devolviendo un archivo estático (por ejemplo, HTML, CSS o JavaScript) que se encuentra en el directorio de recursos estáticos del proyecto. Un recurso web dinámico sería aquel cuyo contenido se genera dinámicamente en el servidor, como una página HTML generada por un controlador de Spring MVC con datos específicos.
-![img_10.png](img_10.png)
-![img_11.png](img_11.png)
-![img_12.png](img_12.png)
-![img_13.png](img_13.png)
-![img_14.png](img_14.png)
-![img_15.png](img_15.png)
+![img_10.png](images/img_10.png)
+![img_11.png](images/img_11.png)
+![img_12.png](images/img_12.png)
+![img_13.png](images/img_13.png)
+![img_14.png](images/img_14.png)
+![img_15.png](images/img_15.png)
 ### PARTE V. - APLICACIÓN Juego de Adivinar Número
 
 Este es un juego simple en línea donde los jugadores intentan adivinar un número generado aleatoriamente entre 1 y 10 para ganar un premio. Cada intento fallido reduce el premio en $10,000 hasta llegar a un saldo negativo.
-![img_16.png](img_16.png)
-![img_17.png](img_17.png)
+![img_16.png](images/img_16.png)
+![img_17.png](images/img_17.png)
 
 ## Características
 
