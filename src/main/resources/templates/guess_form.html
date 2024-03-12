@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Juego de adivinar numero</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Juego de adivinar número</h1>
+    <h2 class="text-center">Premio: $<span th:text="${prize}"></span></h2>
+    <form th:action="@{/guess}" method="post" class="form-inline justify-content-center">
+        <div class="form-group">
+            <label for="number">Ingresa un número entre 1 y 10:</label>
+            <input type="number" name="number" id="number" class="form-control mx-sm-3" min="1" max="10" required>
+            <button type="submit" class="btn btn-primary">Adivinar</button>
+        </div>
+    </form>
+    <p class="text-center" th:text="${message}"></p>
+    <form th:action="@{/reset}" method="post" class="text-center">
+        <button type="submit" class="btn btn-danger">Reiniciar juego</button>
+    </form>
+</div>
+</body>
+</html>
