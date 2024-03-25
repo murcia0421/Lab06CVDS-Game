@@ -1,6 +1,7 @@
 # LABORATORIO 6 - SPRING MVC Game
 ![image](https://github.com/juaneortiz1/Lab06CVDS-Game/assets/97971732/4ff44152-a255-4d17-a2c0-2556588af8b2)
 ![image](https://github.com/juaneortiz1/Lab06CVDS-Game/assets/97971732/7d2645bb-8ee2-47b5-b0f1-b215fd5b1436)
+![image](https://github.com/juaneortiz1/Lab06CVDS-Game/assets/97971732/5f1f59e2-481f-4163-970b-9b2aa4e82d45)
 
 
 ### PARTE II. - APLICACIÓN Juego de Adivinar Número
